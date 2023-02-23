@@ -10,13 +10,13 @@
          
     <distributionManagement>
 	<repository>
-              <id>narendra-snapshot</id>
- 	      <url>http://nexus-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com/repository/narendra-snapshot/</url>     
+              <id>lucky-snapshot</id>
+ 	      <url>http://nexus-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com/repository/lucky-snapshot/</url>     
 	</repository>
  
  	<snapshotRepository>
-	      <id>narendra-snapshot</id>
-	      <url>http://nexus-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com/repository/narendra-snapshot/</url>
+	      <id>lucky-snapshot</id>
+	      <url>http://nexus-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com/repository/lucky-snapshot/</url>
 	</snapshotRepository>
 
     </distributionManagement>
