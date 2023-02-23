@@ -15,7 +15,7 @@
   
   
 #   <mirrors>
-#   <mirror>
+#    <mirror>
 #      <id>narendra-proxy</id>
 #      <mirrorOf>*</mirrorOf>
 #      <url>http://nexus-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com/repository/narendra-proxy/</url>
