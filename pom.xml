@@ -8,19 +8,6 @@
     <artifactId>SpringBootHelloWorld</artifactId>
     <version>1.0-SNAPSHOT</version>
          
-    <distributionManagement>
-	<repository>
-              <id>lucky-snapshot</id>
- 	      <url>http://nexus-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com/repository/lucky-snapshot/</url>     
-	</repository>
- 
- 	<snapshotRepository>
-	      <id>lucky-snapshot</id>
-	      <url>http://nexus-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com/repository/lucky-snapshot/</url>
-	</snapshotRepository>
-
-    </distributionManagement>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
