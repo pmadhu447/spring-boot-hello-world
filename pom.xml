@@ -36,7 +36,14 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+    <properties>
+          <sonar.host.url>https://sonar-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com</sonar.host.url>
+          <sonar.login>sqa_8808c343e2ad8f08db0e45b5cb7f178d6f6f740b</sonar.login>
+          <sonar.projectName>nari333</sonar.projectName>
+          <sonar.projectVersion>main</sonar.projectVersion>
+          <sonar.test.exclusions>**/test/**/*.*</sonar.test.exclusions>
+          <sonar.exclusions>**/ai/**/*.*,**/jdbc/**/*.*,**/mpt/**/*.*,**/jcr/**/*.*,**/JDBC*</sonar.exclusions>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -58,18 +65,4 @@
             </plugin>
         </plugins>
     </build>
-       <profile>
-            <id>sonar</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-               <sonar.host.url>https://sonar-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com</sonar.host.url>
-	       <sonar.login>sqa_8808c343e2ad8f08db0e45b5cb7f178d6f6f740b</sonar.login>
-               <sonar.projectName>nari333</sonar.projectName>
-               <sonar.projectVersion>main</sonar.projectVersion>
-               <sonar.test.exclusions>**/test/**/*.*</sonar.test.exclusions>
-               <sonar.exclusions>**/ai/**/*.*,**/jdbc/**/*.*,**/mpt/**/*.*,**/jcr/**/*.*,**/JDBC*</sonar.exclusions>
-            </properties>
-        </profile>
 </project>
