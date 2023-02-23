@@ -7,6 +7,19 @@
     <groupId>com.edw</groupId>
     <artifactId>SpringBootHelloWorld</artifactId>
     <version>1.0-SNAPSHOT</version>
+         
+    <distributionManagement>
+	<repository>
+              <id>narendra-snapshot</id>
+ 	      <url>http://nexus-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com/repository/narendra-snapshot/</url>     
+	</repository>
+ 
+ 	<snapshotRepository>
+	      <id>narendra-snapshot</id>
+	      <url>http://nexus-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com/repository/narendra-snapshot/</url>
+	</snapshotRepository>
+
+    </distributionManagement>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -36,12 +49,40 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+         
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+               <sonar.host.url>https://sonar-java-cicd.apps.cluster-s7cmb.s7cmb.sandbox2460.opentlc.com</sonar.host.url>
+	       <sonar.login>sqa_8808c343e2ad8f08db0e45b5cb7f178d6f6f740b</sonar.login>
+               <sonar.projectName>nari333</sonar.projectName>
+               <sonar.projectVersion>main</sonar.projectVersion>
+               <sonar.test.exclusions>**/test/**/*.*</sonar.test.exclusions>
+               <sonar.exclusions>**/ai/**/*.*,**/jdbc/**/*.*,**/mpt/**/*.*,**/jcr/**/*.*,**/JDBC*</sonar.exclusions>
+            </properties>
+        </profile>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.1</version>
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
