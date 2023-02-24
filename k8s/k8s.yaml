@@ -15,7 +15,7 @@ spec:
         app: sonarqube-maven-example
     spec:
       containers:
-        - image: quay.io/narendraprasadn/java
+        - image: quay.io/madhu_babu/cicd:latest
           imagePullPolicy: Always
           name: sonarqube-maven-example
           ports:
